@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lezzetli Tarifler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Lezzetli Tarifler</h1>
+    <nav>
+      <ul>
+        <li><a href="#anasayfa">Anasayfa</a></li>
+        <li><a href="#tarifler">Tarifler</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="slider">
+    <div class="slide-container">
+      <img src="images/1.jpg" alt="Yemek 1" class="slide">
+      <img src="images/2.jpg" alt="Yemek 2" class="slide">
+      <img src="images/3.jpg" alt="Yemek 3" class="slide">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </section>
+<p></p>
+<main id="anasayfa">
+  <h2 style="font-family: Georgia, serif; color: #800000; font-weight: bold; font-size: 28px; text-transform: uppercase; text-align: center;">Popüler Tarifler</h2>
+
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <div class="card" style="width: 18rem; border: 1px solid #000000; border-radius: 8px;">
+      <img src="images/4.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="SPOONFUL TARİFİ">SPOONFUL TARİFİ</h3>
+        <p class="card-text">EN LEZZETLİ VE EN KOLAY SPOONFUL TARİFİ</p>
+        <a href="#" class="btn-kirmizi" onclick="tarifeGit()">TARİFE GİT</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem; border: 1px solid #000000; border-radius: 8px;">
+      <img src="images/7.jpg" class="card-img-top" alt="Mantı">
+      <div class="card-body">
+        <h3 class="MANTI TARİFİ">MANTI TARİFİ</h3>
+        <p class="card-text">GERÇEKTEN EN LEZZETLİ VE EN KOLAY MANTI TARİFİ</p>
+        <a href="manti.html" class="btn-kirmizi">TARİFE GİT</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem; border: 1px solid #000000; border-radius: 8px;">
+      <img src="images/5.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="HAMBURGER TARİFİ">HAMBURGER TARİFİ</h3>
+        <p class="card-text"> EN LEZZETLİ VE EN KOLAY HAMBURGER TARİFİ</p>
+        <a href="hamburger.html" class="btn-kirmizi">TARİFE GİT</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem; border: 1px solid #000000; border-radius: 8px;">
+      <img src="images/6.avif" class="card-img-top" alt="Pizza">
+      <div class="card-body">
+        <h3 class="PIZZA TARİFİ">PIZZA TARİFİ</h3>
+        <p class="card-text">GERÇEKTEN EN LEZZETLİ VE EN KOLAY PIZZA TARİFİ</p>
+        <a href="pizza.html" class="btn-kirmizi">TARİFE GİT</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+  
+  <script>
+
+    window.addEventListener("DOMContentLoaded", function() {
+      const resimler = document.querySelectorAll(".card-img-top");
+      resimler.forEach(function(img) {
+        img.style.width = "200px";
+        img.style.height = "150px";
+        img.style.objectFit = "cover"; 
+      });
+    });
+
+  
+    function tarifeGit() {
+      
+      window.location.href = "tarif.html"; 
+    }
+  </script>
+
+  <section id="iletisim">
+    <h2>Bize Ulaşın</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Adınız" required>
+      <input type="email" id="email" placeholder="E-posta" required>
+      <textarea id="message" placeholder="Mesajınız" required></textarea>
+      <button type="submit">Gönder</button>
+      <p id="formMessage"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lezzetli Tarifler. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
